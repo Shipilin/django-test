@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Django3</title>
+        <link rel="stylesheet" href="{% static 'css/app3_style.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h3>You have successfully signed up!</h1>
+                <h4>Here comes the list:</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="userstable">
+                {% if record %}
+                <h4>User registered:</h4>
+                <p>{{ record.first_name }}</p>
+                <p>{{ record.last_name }}</p>
+                <p>{{ record.email }}</p>
+                {% else %}
+                    <p>NO USER RECORD FOUND</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
