@@ -18,6 +18,11 @@ from django.urls import path, include
 from app4 import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
+    path('special/', views.special, name='special'),
     path('admin/', admin.site.urls),
     path('app4/', include('app4.urls')),
+    path('logout/', views.user_logout, name='logout'),
+    # path('admin/', admin.site.urls),
+    # path('app4/', include('app4.urls')),
 ]

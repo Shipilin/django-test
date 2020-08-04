@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    context_dict = {'text': 'hello world', 'number': 100}
-    return render(request, 'app4/index.html', context=context_dict)
+    #context_dict = {'text': 'hello world', 'number': 100}
+    return render(request, 'app4/index.html')#, context=context_dict)
 
 @login_required
 def special(request):

@@ -17,10 +17,10 @@
                     <li><a class="navbar-brand" href="{% url 'app4:index' %}">HOME</a></li>
                     <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
                     <li><a class="navbar-link" href="{% url 'app4:registration' %}">Register</a></li>
-                    {% if user.authenticated %}
-                        <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>
+                    {% if user.is_authenticated %}
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
-                        <li><a class="navbar-link" href="{% url 'app4:user_login' %}">Login</a></li>
+                      <li><a class="navbar-link" href="{% url 'app4:user_login' %}">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
