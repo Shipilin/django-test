@@ -5,5 +5,4 @@ migrations
 __pycache__
 
 # exclude all media files but leave folders and subfolders
-include media
 media/profile_pics/*.*
